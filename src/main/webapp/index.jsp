@@ -7,13 +7,34 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
+<style>
+  form {
+    font-family: Consolas, serif;
+    border: cornflowerblue;
+    color: darkslategray;
+  }
+  h2 {
+    text-transform: uppercase;
+    font-family: Consolas, serif;
+    color: #000028;
+  }
+
+  input {
+    padding: 10px 20px 10px;
+  }
+
+  button {
+    padding: 10px 20px 10px;
+  }
+
+
+</style>
   <head>
     <title>Bank Interest Calculator</title>
-    <link rel="stylesheet" type="text/css" href="css/style.css"/>
   </head>
   <body>
   <h2>Bank Interest Calculator</h2>
-  <form>
+  <form method="post" action="/calculate">
     <fieldset>
       <legend>Calculator</legend>
       <table>
@@ -23,7 +44,7 @@
         </tr>
         <tr>
           <td>Loan term in months</td>
-          <td><input type="text" name="months" placeholder="3"></td>
+          <td><input type="text" name="term" placeholder="3"></td>
         </tr>
         <tr>
           <td>Interest rate per year</td>
